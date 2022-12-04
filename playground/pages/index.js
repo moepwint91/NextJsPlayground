@@ -7,9 +7,11 @@ function Home({ blogs }) {
     <div className="container-fluid">
       <div className="row">
         {blogs.map((blog) => (
-          <div className="col-sm-4 my-2 d-flex justify-content-center">
+          <div
+            className="col-sm-4 my-2 d-flex justify-content-center"
+            key={blog.id}
+          >
             <BlogItem
-              key={blog.id}
               coverPhoto={blog.coverPhoto}
               blogTitle={blog.blogTitle}
               blogContent={blog.blogShortDescription}
